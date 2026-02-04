@@ -44,7 +44,12 @@ for ($i = 0; $i -lt $Lines.Count; $i++) {
         $BodyLines = @()
 
         for ($j = $i + 1; $j -lt $Lines.Count; $j++) {
+            # Stop at next Task heading
             if ($Lines[$j] -match '^###\s*Task\s+\d+:') { break }
+            # Stop at separator line (---)
+            if ($Lines[$j] -match '^---\s*$') { break }
+            # Stop at any ## heading (like "## Napomene")
+            if ($Lines[$j] -match '^##\s+') { break }
             if ($Lines[$j].Trim()) {
                 $BodyLines += $Lines[$j]
             }
