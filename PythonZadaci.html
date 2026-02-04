@@ -1,0 +1,181 @@
+﻿<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python zadaci za početnika</title>
+  <style>
+    :root {
+      --bg: #f4f1e8;
+      --ink: #1f2a24;
+      --muted: #4c5a50;
+      --accent: #0f6b5f;
+      --card: #fffaf0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #dbe9e1 0%, transparent 60%),
+        radial-gradient(800px 500px at 110% 10%, #f0e3c7 0%, transparent 60%),
+        var(--bg);
+      padding: 32px;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 8px;
+      letter-spacing: 0.5px;
+    }
+    p.lead {
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #e7dcc6;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 14px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+    .hint {
+      margin: 0;
+      color: var(--muted);
+    }
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    li {
+      margin: 6px 0;
+    }
+    .tip {
+      margin: 18px;
+      padding: 12px 14px;
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      border-radius: 6px;
+    }
+    .done {
+      color: #b21942;
+      /* font-weight: 600; */
+    }
+    .codex-shot {
+      display: block;
+      margin-top: 8px;
+      /* max-width: 160px; */
+      width: 100%;
+      border: 1px solid #d6c9b0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Python zadaci za početnika</h1>
+
+    <div class="tip">
+      <strong>Uputstvo za izradu:</strong> svaki zadatak reši u posebnoj `.py` datoteci.
+      Koristi jasna imena promenljivih i dodaj kratke komentare gde je potrebno.
+      Testiraj program sa nekoliko različitih ulaza.
+    </div>
+
+    <div class="tip">
+      <strong>Kratko uputstvo za korišćenje AI (ChatGPT i Codex):</strong>
+      koristi AI kao pomoćnika, ne kao zamenu. Postavljaj konkretna pitanja
+      (npr. „objasni kako radi Bubble Sort“ ili „proveri moj kod“), zadrži svoje
+      rešenje i pokušaj da razumeš svaki red koda koji dobiješ. Ako AI predloži
+      kompletno rešenje, prvo pokušaj sam, pa uporedi i pitaj gde grešiš.
+    </div>
+
+    <div class="tip">
+      <strong>Kako da koristiš Codex u Visual Studio Code:</strong>
+      <ul>
+        <li><span class="done">Instaliraj dodatak „OpenAI Codex“ iz Extensions (Ctrl+Shift+X). (ovo sam ja već uradio)</span></li>
+        <li><span class="done">Prijavi se ili unesi API ključ u podešavanjima dodatka. (ovo sam ja već uradio)</span></li>
+        <li>Otvori `.py` fajl i napiši kratak opis zadatka u komentaru ili u poruci Codex‑u.</li>
+        <li>Koristi komande kao: „objasni mi ovaj kod“, „nađi grešku“, „predloži poboljšanje“.</li>
+        <li>Pročitaj predlog, izmeni po potrebi, pa pokreni kod da vidiš rezultat.</li>
+        <li>Ako nešto nije jasno, traži objašnjenje korak‑po‑korak.</li>
+      </ul>
+    </div>
+
+    <h2 class="lead">Cilj je da vežbaš petlje, rad sa brojevima i nizovima (liste).</h2>
+
+    <div class="card">
+      <h2>1) Suma cifara višecifrenog broja</h2>
+      <p class="hint">Napravi program koji za uneti višecifreni broj računa zbir njegovih cifara.</p>
+      <ul>
+        <li>Unos: broj (npr. 4827).</li>
+        <li>Izlaz: suma cifara (4 + 8 + 2 + 7 = 21).</li>
+        <li>Koristi petlju i operator `%` i `//`.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>2) Sume prvih 10 brojeva</h2>
+      <p class="hint">U istom zadatku uradi sledeće podtačke.</p>
+      <ul>
+        <li>a) Izračunaj zbir brojeva od 1 do 10 (koristi `for` ili `while`).</li>
+        <li>b) Izračunaj zbir prvih 10 parnih brojeva (2, 4, 6, ...). Proveri parnost sa `n % 2 == 0`.</li>
+        <li>c) Izračunaj zbir prvih 10 neparnih brojeva (1, 3, 5, ...). Proveri uslov `n % 2 != 0`.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3) Sortiranje elemenata niza - rastuće</h2>
+      <p class="hint">Unesi 10 celih brojeva u listu i sortiraj ih rastuće.</p>
+      <ul>
+        <li>Nije dozvoljeno koristiti ugrađene funkcije za sortiranje.</li>
+        <li>Implementiraj Bubble Sort i prikaži listu pre i posle sortiranja.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4) Sortiranje elemenata niza - opadajuće</h2>
+      <p class="hint">Unesi 10 celih brojeva u listu i sortiraj ih opadajuće.</p>
+      <ul>
+        <li>Nije dozvoljeno koristiti ugrađene funkcije za sortiranje.</li>
+        <li>Implementiraj Bubble Sort i prikaži rezultat opadajuće.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>5) Aritmetička sredina niza</h2>
+      <p class="hint">Izračunaj aritmetičku sredinu unetih brojeva u listi.</p>
+      <ul>
+        <li>Izračunaj zbir svih elemenata.</li>
+        <li>Broj elemenata je `len(lista)`.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6) Proizvod elemenata niza</h2>
+      <p class="hint">Izračunaj proizvod svih elemenata liste.</p>
+      <ul>
+        <li>Postavi početnu vrednost proizvoda na 1.</li>
+        <li>U petlji množi svaki element.</li>
+      </ul>
+    </div>
+
+    <div class="tip">
+      <strong>Napomena:</strong> ako pokreneš Visual Studio Code tamo gde si već radio, sve će ti biti podešeno.
+      Ako nešto nije u redu, u Visual Studio Code otvori folder `D:\Djole\Python\HelloWorld`.
+    </div>
+
+    <div class="tip">
+      <strong>Napomena:</strong> da vidiš Codex u Visual Studio Code, klikni na ikonicu „OpenAI Codex“ u levoj traci (Activity Bar).
+      <img class="codex-shot" src="icons.png" alt="Ikonica OpenAI Codex u levoj traci (Activity Bar) u VS Code." />
+    </div>
+  </div>
+</body>
+</html>
