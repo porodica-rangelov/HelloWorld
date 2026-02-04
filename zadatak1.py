@@ -3,6 +3,7 @@ print("Dobrodosli u Suma cifara visecifrenog broja")
 broj = int(input("Unesi visecifreni broj: "))
 suma = 0
 
+# ovo je dobro, Djole
 while broj > 0:
     cifra = broj % 10
     suma += cifra
