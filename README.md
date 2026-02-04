@@ -1,65 +1,124 @@
-﻿<div align="center">
+<div align="center">
 
-# Python zadaci za početnika
+# Python zadaci za pocetnike
 
-**Ovaj repo sadrži listu zadataka za vežbanje osnova Pythona: petlje, rad sa brojevima i nizovima (liste).**
+**Ovaj repo sadrzi listu zadataka za vezbanje osnova Pythona: petlje, rad sa brojevima i nizovima (liste).**
 
 </div>
 
 ---
 
 ## Uputstvo za izradu
-- ✅ Svaki zadatak rešavaj u posebnoj `.py` datoteci.
+- ✅ Svaki zadatak resavaj u posebnoj `.py` datoteci.
 - ✅ Koristi jasna imena promenljivih i dodaj kratke komentare gde je potrebno.
-- ✅ Testiraj program sa nekoliko različitih ulaza.
+- ✅ Testiraj program sa nekoliko razlicitih ulaza.
 
-## Kratko uputstvo za korišćenje AI (ChatGPT i Codex)
-> **Koristi AI kao pomoćnika, ne kao zamenu.**
+## Kratko uputstvo za koriscenje AI (ChatGPT i Codex)
+> **Koristi AI kao pomocnika, ne kao zamenu.**
 
-- 💡 Postavljaj konkretna pitanja (npr. „objasni kako radi Bubble Sort“ ili „proveri moj kod“).
-- 💡 Zadrži svoje rešenje i pokušaj da razumeš svaki red koda koji dobiješ.
-- 💡 Ako AI predloži kompletno rešenje, prvo pokušaj sam, pa uporedi i pitaj gde grešiš.
+- 💡 Postavljaj konkretna pitanja (npr. "objasni kako radi Bubble Sort" ili "proveri moj kod").
+- 💡 Zadrzi svoje resenje i pokusaj da razumes svaki red koda koji dobijes.
+- 💡 Ako AI predlozi kompletno resenje, prvo pokusaj sam, pa uporedi i pitaj gde gresis.
 
-## Kako da koristiš Codex u Visual Studio Code
-- 🧩 Instaliraj dodatak „OpenAI Codex“ iz Extensions (Ctrl+Shift+X).
-- 🔐 Prijavi se ili unesi API ključ u podešavanjima dodatka.
-- 📝 Otvori `.py` fajl i napiši kratak opis zadatka u komentaru ili u poruci Codex‑u.
-- 🧭 Koristi komande kao: „objasni mi ovaj kod“, „nađi grešku“, „predloži poboljšanje“.
-- 🔍 Pročitaj predlog, izmeni po potrebi, pa pokreni kod da vidiš rezultat.
-- ❓ Ako nešto nije jasno, traži objašnjenje korak‑po‑korak.
+## Kako da koristis Codex u Visual Studio Code
+- 🧩 Instaliraj dodatak "OpenAI Codex" iz Extensions (Ctrl+Shift+X).
+- 🔐 Prijavi se ili unesi API kljuc u podesavanjima dodatka.
+- 📝 Otvori `.py` fajl i napisi kratak opis zadatka u komentaru ili u poruci Codex-u.
+- 🧭 Koristi komande kao: "objasni mi ovaj kod", "nadji gresku", "predlozi poboljsanje".
+- 🔍 Procitaj predlog, izmeni po potrebi, pa pokreni kod da vidis rezultat.
+- ❓ Ako nesto nije jasno, trazi objasnjenje korak-po-korak.
 
-## Zadaci
+---
 
-1. **Suma cifara višecifrenog broja**  
-Unesi višecifreni broj i izračunaj zbir njegovih cifara.  
-Koristi petlju i operatore `%` i `//`.
+## 🧩 Zadaci (TODO)
 
-2. **Sume prvih 10 brojeva**  
-a) Zbir brojeva od 1 do 10.  
-b) Zbir prvih 10 parnih brojeva.  
-c) Zbir prvih 10 neparnih brojeva.
+### Task 1: Suma cifara visecifrenog broja
+- [ ] Uneti visecifreni broj
+- [ ] Izracunati zbir njegovih cifara
+- [ ] Koristiti `%` i `//` u petlji
 
-3. **Sortiranje elemenata niza – rastuće**  
-Unesi 10 celih brojeva u listu i sortiraj ih rastuće.  
-Nije dozvoljeno koristiti ugrađene funkcije za sortiranje.  
-Implementiraj Bubble Sort i prikaži listu pre i posle sortiranja.
+**Uputstvo za resavanje:**
+1. Koristiti `input()` za unos broja i konvertovati ga u `int`
+2. Inicijalizovati sumu na 0
+3. Koristiti `while` petlju dok je broj > 0:
+   - Uzeti poslednju cifru pomocu `broj % 10`
+   - Dodati cifru na sumu
+   - Ukloniti poslednju cifru pomocu `broj // 10`
+4. Prikazati konacnu sumu
 
-4. **Sortiranje elemenata niza – opadajuće**  
-Unesi 10 celih brojeva u listu i sortiraj ih opadajuće.  
-Nije dozvoljeno koristiti ugrađene funkcije za sortiranje.  
-Implementiraj Bubble Sort i prikaži rezultat opadajuće.
+---
 
-5. **Aritmetička sredina niza**  
-Izračunaj aritmetičku sredinu unetih brojeva u listi.  
-Zbir svih elemenata / `len(lista)`.
+### Task 2: Sume brojeva (3 podzadatka)
+- [ ] Izracunati zbir brojeva od 1 do 10
+- [ ] Izracunati zbir prvih 10 parnih brojeva
+- [ ] Izracunati zbir prvih 10 neparnih brojeva
 
-6. **Proizvod elemenata niza**  
-Izračunaj proizvod svih elemenata liste.  
-Početna vrednost proizvoda je 1, pa u petlji množi svaki element.
+**Uputstvo za resavanje:**
+1. Podzadatak 1: Koristiti `for` petlju od 1 do 10 i sabirati brojeve
+2. Podzadatak 2: Koristiti `for` petlju i sabirati samo parne brojeve (2, 4, 6, ..., 20)
+3. Podzadatak 3: Koristiti `for` petlju i sabirati samo neparne brojeve (1, 3, 5, ..., 19)
+4. Prikazati sve tri sume
+
+---
+
+### Task 3: Sortiranje elemenata niza - rastuce
+- [ ] Uneti 10 celih brojeva u listu
+- [ ] Implementirati Bubble Sort (bez ugradjenih funkcija)
+- [ ] Prikazati listu pre i posle sortiranja
+
+**Uputstvo za resavanje:**
+1. Napraviti praznu listu
+2. Koristiti `for` petlju za unos 10 brojeva u listu
+3. Sacuvati originalnu listu za prikaz (napraviti kopiju)
+4. Implementirati Bubble Sort:
+   - Spoljna `for` petlja: od 0 do len(lista)-1
+   - Unutrasnja `for` petlja: od 0 do len(lista)-1-i
+   - Ako je `lista[j] > lista[j+1]`, zameniti ih
+5. Prikazati originalnu i sortiranu listu
+
+---
+
+### Task 4: Sortiranje elemenata niza - opadajuce
+- [ ] Uneti 10 celih brojeva u listu
+- [ ] Implementirati Bubble Sort (bez ugradjenih funkcija)
+- [ ] Sortirati listu opadajuce i prikazati rezultat
+
+**Uputstvo za resavanje:**
+1. Isti postupak kao Task 3
+2. Promeniti uslov u Bubble Sort algoritmu:
+   - Ako je `lista[j] < lista[j+1]`, zameniti ih (obrnuto od rastuceg)
+3. Prikazati originalnu i sortiranu listu (opadajuce)
+
+---
+
+### Task 5: Aritmeticka sredina niza
+- [ ] Uneti brojeve u listu
+- [ ] Izracunati zbir elemenata
+- [ ] Podeliti zbir sa `len(lista)`
+
+**Uputstvo za resavanje:**
+1. Napraviti listu brojeva (uneti nekoliko brojeva)
+2. Inicijalizovati sumu na 0
+3. Koristiti `for` petlju za sabiranje svih elemenata
+4. Izracunati sredinu: `suma / len(lista)`
+5. Prikazati aritmeticku sredinu
+
+---
+
+### Task 6: Proizvod elemenata niza
+- [ ] Inicijalizovati proizvod na 1
+- [ ] U petlji mnoziti svaki element liste
+- [ ] Prikazati konacan proizvod
+
+**Uputstvo za resavanje:**
+1. Napraviti listu brojeva
+2. Inicijalizovati proizvod na 1 (ne 0!)
+3. Koristiti `for` petlju i mnoziti svaki element sa proizvodom
+4. Prikazati konacni proizvod svih elemenata
 
 ---
 
 ## Napomene
-- 📌 Ako pokreneš Visual Studio Code tamo gde si već radio, sve će biti podešeno.
-- 📂 Ako nešto nije u redu, u Visual Studio Code otvori folder `D:\Djole\Python\HelloWorld`.
-- 🧭 Da vidiš Codex u Visual Studio Code, klikni na ikonicu „OpenAI Codex“ u levoj traci (Activity Bar).
+- 📌 Ako pokrenes Visual Studio Code tamo gde si vec radio, sve ce biti podeseno.
+- 📂 Ako nesto nije u redu, u Visual Studio Code otvori folder `D:\Djole\Python\HelloWorld`.
+- 🧭 Da vidis Codex u Visual Studio Code, klikni na ikonicu "OpenAI Codex" u levoj traci (Activity Bar).
